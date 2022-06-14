@@ -1,0 +1,366 @@
+@font-face {
+  font-family: 'Myriad-pro';
+  src: url("fonts/myriadpro-cond.eot?v=1");
+  src: url("fonts/myriadpro-cond.eot?v=1#iefix") format("embedded-opentype"), url("fonts/myriadpro-cond.ttf?v=1") format("truetype"), url("fonts/myriadpro-cond.woff?v=1") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Myriad-pro';
+  src: url("fonts/myriadpro-boldcond.eot?v=1");
+  src: url("fonts/myriadpro-boldcond.eot?v=1#iefix") format("embedded-opentype"), url("fonts/myriadpro-boldcond.ttf?v=1") format("truetype"), url("fonts/myriadpro-boldcond.woff?v=1") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Myriad-pro';
+  src: url("fonts/myriadpro-cond.eot?v=1");
+  src: url("fonts/myriadpro-cond.eot?v=1#iefix") format("embedded-opentype"), url("fonts/myriadpro-cond.ttf?v=1") format("truetype"), url("fonts/myriadpro-cond.woff?v=1") format("woff");
+  font-weight: 300;
+  font-style: 300; }
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url("fonts/ProximaNova-Regular.eot?v=1");
+  src: url("fonts/ProximaNova-Regular.eot?v=1#iefix") format("embedded-opentype");
+  src: url("fonts/ProximaNova-Regular.woff?v=1#iefix") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ProximaNova-Semibold';
+  src: url("fonts/ProximaNova-Semibold.eot?v=1");
+  src: url("fonts/ProximaNova-Semibold.eot?v=1#iefix") format("embedded-opentype");
+  src: url("fonts/ProximaNova-Semibold.woff?v=1#iefix") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url("fonts/ProximaNova-Bold.eot?v=1");
+  src: url("fonts/ProximaNova-Bold.eot?v=1#iefix") format("embedded-opentype");
+  src: url("fonts/ProximaNova-Bold.woff?v=1#iefix") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ProximaNova-Black';
+  src: url("fonts/ProximaNova-Black.eot?v=1");
+  src: url("fonts/ProximaNova-Black.eot?v=1#iefix") format("embedded-opentype");
+  src: url("fonts/ProximaNova-Black.woff?v=1#iefix") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+nav#responsive {
+    font-size: 20px;
+    background: #06152B;
+    height: 100vh;
+    overflow: auto;
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    top: 0;
+    max-width: 100%;
+    transition: .5s ease-in-out;
+    z-index: 100;
+}
+
+body { 
+	max-width: 1290px; 
+	margin: 0 auto !important; 
+	float: none !important; 
+}
+
+header {
+  font-family: 'ProximaNova-Bold';
+  font-size: 1rem;
+  top: -1px;
+  z-index: 15;
+}
+
+header .head-bar {
+  align-items: center;
+  color: #FFF;
+  display: flex;
+  padding: 0;
+  border-bottom: 1px solid #A19D99;
+}
+
+header .head-bar .logo {
+  width: 35%;
+  padding: 40px 0 40px 0;
+  border-right: 1px solid #A19D99;
+  /* border-bottom: 1px solid #A19D99; */
+}
+
+header .head-bar .logo__desktop {
+  font-family: 'ProximaNova-Regular';
+  display: flex;
+  align-items: center;
+  color: #142C49;
+  font-size: 14px;
+  text-decoration: none;
+}
+header .head-bar .logo__desktop img {
+  width: 40%;
+  max-width: 190px;
+  margin-right: 20px;
+}
+header .head-bar .logo__mobile {
+  display: none;
+}
+header .head-bar .logo__mobile img {
+  width: 100%;
+}
+header .head-bar .icons {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px 0 40px 0;
+  /* border-bottom: 1px solid #A19D99; */
+}
+
+header .head-bar .icons a {
+  padding: 0 20px;
+}
+
+.icon_hamburguer {
+  cursor: pointer;
+  height: 10vw;
+  position: relative;
+  width: 10vw;
+  z-index: 11;
+}
+.hamburguer {
+  width: 8vw;
+  height: 1vw;
+  background: #152C49;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+  transition: .5s;
+}
+.hamburguer::before {
+  top: -2.5vw;
+  background: #1F85C9;
+}
+.hamburguer::after {
+  top: 2.5vw;
+  background: #DE5017;
+}
+.hamburguer::before, .hamburguer::after {
+  content: '';
+  position: absolute;
+  width: 8vw;
+  height: 1vw;
+  transition: .5s;
+}
+
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.75rem 0;
+  margin: 0;
+  list-style: none;
+  /* background-color: #e9ecef; */
+  border-radius: 0.25rem;
+  border-bottom: 1px solid #A19D99;
+  font-family: 'ProximaNova-Regular';
+}
+.breadcrumb-item {
+  color: #1F85C9;
+}
+.breadcrumb-item.active {
+  color: #DE5117;
+  font-weight: bold;
+}
+.breadcrumb-item a {
+  text-decoration: none;
+}
+.breadcrumb-item a:visited{
+  color: #1F85C9;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #6c757d;
+  content: "|";
+}
+
+.main {
+  display:flex;
+}
+.main .main__left {
+  width: 35%;
+  padding: 0;
+  margin: 0;
+}
+.main .main__left h1{
+  font-family: 'ProximaNova-Black';
+  font-size: 3em;
+  color: #436278;
+  margin-top: 4em;
+}
+.main .main__left .link {
+  color: #1F85C9;
+  font-family: 'ProximaNova-Regular';
+  font-size: 14px;
+}
+.main .main__left .link a{
+  color: #1F85C9;
+  font-family: 'ProximaNova-Regular';
+}
+.main .main__left .link img {
+  fill: #1F85C9;
+}
+.main .main__left p {
+  font-family: 'ProximaNova-Regular';
+  font-size: 14px;
+  line-height: 25px;
+}
+.main .main__left h2 {
+  font-family: 'ProximaNova-Regular';
+  font-size: 24px;
+  color: #142C49;
+}
+.main .main__left {
+  background-image: url('../images/cspwave.svg');
+  background-repeat: no-repeat;
+  background-position: 0 -40px; 
+  background-size: 150px 150px;
+}
+.main .main__right {
+  position: relative;
+  width: 65%;
+  padding: 0;
+}
+.main .main__right .post_header {
+  background-color: #C7DCEA;
+}
+.main .main__right .post_header img {
+  width: 100%;
+}
+.main .main__right .text {
+  background-color: #C7DCEA;
+  font-family: 'ProximaNova-Regular';
+  color: #142C49;
+  line-height: 25px;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+.main .main__right .text h2 {
+  color: #1F85C9;
+  font-family: 'ProximaNova-Bold';
+}
+.main .main__right .extra h2 {
+  color: #1F85C9;
+  font-family: 'ProximaNova-Bold';
+}
+.main .main__right .extra {
+  background-color: #C7DCEA;
+  font-family: 'ProximaNova-Regular';
+  color: #142C49;
+  line-height: 25px;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 0.75em 0;
+  border-radius: 0 0 45px 0;
+}
+.main .main__right .extra ul{
+  list-style: none;
+}
+.main .main__right .extra ul li:before {
+  content: "-";
+  color: white;
+  padding-right:5px;
+}
+.main .main__right .extra li{
+  font-size: 1.25em;
+  color: #142C49;
+  font-family: 'ProximaNova-Semibold';
+  line-height: 2em;
+}
+.false_footer .false_footer__title{
+  margin: 1em 0 0.5em 0;
+  text-align: center;
+  font-family: 'ProximaNova-Regular';
+  font-size: 4em;
+  color: #142C49;
+}
+.false_footer .false_footer__content{
+  display: flex;
+  font-family: 'ProximaNova-Regular';
+}
+.false_footer .false_footer__content .column{
+  width: 33.33%;
+  color: #FFF;
+  padding: 4em 2em 4em 2em;
+  font-size: 14px;
+  line-height: 1.25em;
+}
+.false_footer .false_footer__content .column .title{
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: 'ProximaNova-Bold';
+}
+.false_footer .false_footer__content .left{
+  background-color: #DE5017;
+}
+.false_footer .false_footer__content .roundb{
+  border-radius: 45px 0 0 0;
+}
+.false_footer .false_footer__content .roundb2{
+  border-radius: 0 0 25px 0;
+}
+.false_footer .false_footer__content .center{
+  background-color: #142C49;
+}
+.false_footer .false_footer__content .right{
+  background-color: #1F85C9;
+}
+@media only screen and (min-width: 320px) {
+  .icon_hamburguer {
+      width: 50px;
+      height: 50px;
+      position: relative;
+  }
+  .hamburguer {
+    width: 32px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+  }
+  .hamburguer::before {
+    top: -10px;
+  }
+  .hamburguer::before, .hamburguer::after {
+    width: 32px;
+    height: 3px;
+    transition: .5s;
+    right: 0;
+  }
+  .hamburguer::after {
+    top: 10px;
+  }
+  .hamburguer::before, .hamburguer::after {
+    width: 32px;
+    height: 3px;
+    transition: .5s;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 1024px){
+  nav#responsive {
+      display: none;
+  }
+}
